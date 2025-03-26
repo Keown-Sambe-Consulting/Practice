@@ -61,6 +61,7 @@ jobs:
           sqlcmd -S "$DEV_SERVER" -U "$DEV_DB_USER" -P "$DEV_DB_PASSWORD" -d "master" -i  "DatabaseAutomation/4_ExecuteStoredProcedure.sql"
 
   deploy-prod:
+    needs: deploy-dev
     environment: PROD
     runs-on: ubuntu-latest
     steps:
