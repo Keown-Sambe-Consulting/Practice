@@ -3,9 +3,18 @@ name: Testing Workflow
 on: workflow_dispatch
 
 jobs:
-    test:
+    DEV:
       runs-on: ubuntu-latest
-      environment: Testing
+      environment: DEV
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+        
+        - name: Print message
+          run: echo "Running in Testing environment"
+    PROD:
+      runs-on: ubuntu-latest
+      environment: PROD
       steps:
         - name: Checkout code
           uses: actions/checkout@v4
