@@ -1,6 +1,8 @@
 name: Deploy SQL Database
 on:  workflow_dispatch
-# push:
+# pull_request:
+#   type:
+#     - closed
 #   branches:
 #     - main
 
