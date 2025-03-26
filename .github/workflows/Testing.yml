@@ -13,6 +13,7 @@ jobs:
         - name: Print message
           run: echo "Running in Testing environment"
     PROD:
+      needs: DEV
       runs-on: ubuntu-latest
       environment: PROD
       steps:
