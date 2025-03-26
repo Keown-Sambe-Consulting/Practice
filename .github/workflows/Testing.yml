@@ -2,15 +2,13 @@ name: Testing Workflow
 
 on: workflow_dispatch
 
-env:
-  ENVIRONMENT: Testing
-
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Print message
-        run: echo "Running in Testing environment"
+    test:
+      runs-on: ubuntu-latest
+      environment: Testing
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+        
+        - name: Print message
+          run: echo "Running in Testing environment"
