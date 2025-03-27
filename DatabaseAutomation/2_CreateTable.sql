@@ -1,4 +1,4 @@
-USE [AutoTest]
+USE [AutoTest_KN_27March]
 GO
 
 CREATE TABLE [user] (
