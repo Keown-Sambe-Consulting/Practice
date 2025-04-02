@@ -1,4 +1,4 @@
-USE [AutoTest_KN_27March]
+USE [AutoTest_KN]
 GO
 
 EXEC sp_InsertUser @FirstName = 'John', @Surname = ' Stone', @Email = 'Stone@gmail.com'
