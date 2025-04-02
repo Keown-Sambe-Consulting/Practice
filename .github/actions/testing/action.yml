@@ -28,7 +28,7 @@ runs:
 
     - name: Install SQL Server client
       shell: bash
-      run: sudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
+      run: sudo apt-get install -y mssql-tools unixodbc-dev
 
     - name: Add SQL Server tools to PATH
       shell: bash
