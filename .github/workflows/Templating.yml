@@ -1,4 +1,4 @@
-name: Deploy Database
+name: Deploy Database Templating
 on: workflow_dispatch
 jobs:
   deploy:
