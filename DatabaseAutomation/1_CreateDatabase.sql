@@ -2,6 +2,6 @@
 USE master
 GO
  
-CREATE DATABASE AutoTest_KN_27March
+CREATE DATABASE AutoTest_KN
 GO
 
