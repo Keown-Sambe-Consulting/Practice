@@ -10,7 +10,7 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
         - name: testing template
-          uses: ./.github/actions/testing        
+          uses: ./.github/actions/testing/action.yml        
         - name: Print message
           run: echo "Running in Testing environment"
     PROD:
