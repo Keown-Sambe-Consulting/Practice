@@ -1,8 +1,0 @@
-name: "Testing Templating"
-description: "Testing"
-runs:
-  using: "composite"
-  steps:
-    - name: Testing
-      run: echo "Hello from my custom GitHub Action"
-      shell: bash
