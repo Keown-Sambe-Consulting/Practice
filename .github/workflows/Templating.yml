@@ -1,12 +1,24 @@
 name: Deploy Database Templating
 on: workflow_dispatch
 jobs:
-  deploy:
+  Dev-deploy:
+    environment: DEV
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/testing
         with:
-          server: ${{ secrets.SERVER }}
-          db_user: ${{ secrets.DB_USER }}
-          db_password: ${{ secrets.DB_PASSWORD }}
+          server: ${{ secrets.DEV_SERVER }}
+          db_user: ${{ secrets.DEV_DB_USER }}
+          db_password: ${{ secrets.DEV_DB_PASSWORD }}
+  Prod-deploy:
+    environment: PROD
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/testing
+        with:
+          server: ${{ secrets.PROD_SERVER }}
+          db_user: ${{ secrets.PROD_DB_USER }}
+          db_password: ${{ secrets.PROD_DB_PASSWORD }}
+
