@@ -12,6 +12,7 @@ jobs:
           db_user: ${{ secrets.DEV_DB_USER }}
           db_password: ${{ secrets.DEV_DB_PASSWORD }}
   Prod-deploy:
+    needs: Dev-deploy
     environment: PROD
     runs-on: ubuntu-20.04
     steps:
